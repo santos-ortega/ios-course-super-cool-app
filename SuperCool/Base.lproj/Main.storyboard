@@ -1,25 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SuperCool" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="Noj-05-6ar">
+                                <rect key="frame" x="-202" y="-155" width="733" height="1038"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vn-K5-IgG">
+                                <rect key="frame" x="94" y="319" width="186" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="N6C-em-WRJ"/>
+                                    <constraint firstAttribute="width" constant="186" id="l1Y-yM-otS"/>
+                                </constraints>
+                                <state key="normal" title="Make me super Cool!"/>
+                                <connections>
+                                    <action selector="makeMeNotSoUnCool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v4r-ry-Qix"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BAM-Tight" translatesAutoresizingMaskIntoConstraints="NO" id="PHs-wT-zeg">
+                                <rect key="frame" x="20" y="28" width="335" height="126"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="126" id="dEO-Ob-dkh"/>
+                                    <constraint firstAttribute="width" constant="335" id="djY-gx-Skb"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5vn-K5-IgG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="16X-S5-7l2"/>
+                            <constraint firstItem="PHs-wT-zeg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="N17-r9-00v"/>
+                            <constraint firstItem="5vn-K5-IgG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cxd-8A-RBp"/>
+                            <constraint firstItem="PHs-wT-zeg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w0t-Uf-aOu"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="coolBg" destination="Noj-05-6ar" id="PKf-Ja-JIE"/>
+                        <outlet property="coolLogo" destination="PHs-wT-zeg" id="ZyI-v3-wUZ"/>
+                        <outlet property="unCoolButton" destination="5vn-K5-IgG" id="iGB-VR-GpT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="278.5" y="256.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BAM-Tight" width="530" height="94"/>
+        <image name="bg" width="1667" height="1667"/>
+    </resources>
 </document>
